@@ -19,10 +19,10 @@ class HomePage extends StatelessWidget {
           title: Text('JSONPlaceholder API'),
           bottom: TabBar(
             tabs: [
-              Tab(text: 'Posts (100)', icon: Icon(Icons.article_outlined),),
+              Tab(text: 'Posts', icon: Icon(Icons.article_outlined),),
               Tab(text: 'Comments', icon: Icon(Icons.comment_outlined),),
               Tab(text: 'Albums', icon: Icon(Icons.photo_album_outlined),),
-              Tab(text: 'Photos'),
+              Tab(text: 'Photos', icon: Icon(Icons.photo),),
               Tab(text: 'Todos'),
               Tab(text: 'Users'),
             ],
