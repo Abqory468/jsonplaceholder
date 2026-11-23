@@ -10,10 +10,11 @@ class CommentWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Card(
+      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 5),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -26,7 +27,7 @@ class CommentWidget extends StatelessWidget {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.symmetric(horizontal: 8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -63,12 +64,15 @@ class CommentWidget extends StatelessWidget {
               ],
             ),
           ),
-          Divider(height: 20),
-          Text(
-            comments.body,
-            style: theme.textTheme.bodyMedium!.copyWith(
-              color: Colors.grey[700],
-              height: 1.5,
+          Divider(height: 20,),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10.0),
+            child: Text(
+              comments.body,
+              style: theme.textTheme.bodyMedium!.copyWith(
+                color: Colors.grey[700],
+                height: 1.4,
+              ),
             ),
           ),
         ],
